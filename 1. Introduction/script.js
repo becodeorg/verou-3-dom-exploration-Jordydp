@@ -4,7 +4,7 @@ document.body.style.background ="#FF69B4"; // change background color
 
 
 function random_bg_color() { //create function
-    var x = Math.floor(Math.random() * 256); //generate 1ste rbg color
+    var x = Math.floor(Math.random() * 256); //generate 1ste rbg color (Var x  Math.floor =
     var y = Math.floor(Math.random() * 256);//generate 2nd rbg color
     var z = Math.floor(Math.random() * 256); //generate 3th rbg color
     var bgColor = "rgb(" + x + "," + y + "," + z + ")"; // putting x y z on the respective place in rbg
