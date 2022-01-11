@@ -30,6 +30,7 @@ for(let i = 0; i < par.length; i++){ // create array
             var bgColor = "rgb(" + x + "," + y + "," + z + ")"; // putting x y z on the respective place in rbg
             console.log(bgColor);// display rgb          
             par[i].style.background = bgColor; // change bg color to random rbg
+            
         }        
         random_bg_color(); //use Function 
     }
