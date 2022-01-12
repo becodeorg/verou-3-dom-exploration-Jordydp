@@ -9,6 +9,7 @@ const collection = [
         position: "Striker",
         foot: "Right",
         picture: "./images/Openda.png"
+    
     },
     {
         name: "Lukaku",

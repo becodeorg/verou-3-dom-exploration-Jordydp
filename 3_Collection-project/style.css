@@ -5,6 +5,9 @@
 
 * body {
   background-color: green;
+}
+
+* body section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12,10 +15,29 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: Center;
+      -ms-flex-pack: Center;
+          justify-content: Center;
 }
 
-* body img {
+* body section .card {
+  margin: 3rem;
+  background-image: url(./images/background-Card.png);
+  background-repeat: no-repeat;
+  height: 305px;
+  width: 220px;
+  background-position: center;
+  background-size: 105%;
+  background-position-x: -6px;
+  background-position-y: -5px;
+  display: block;
+  position: relative;
+}
+
+* body section .card img {
   width: 60px;
   height: 60px;
+  vertical-align: middle;
+  border-style: none;
 }
 /*# sourceMappingURL=style.css.map */
