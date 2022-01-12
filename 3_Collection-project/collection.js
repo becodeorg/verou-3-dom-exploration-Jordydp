@@ -122,21 +122,6 @@ const collection = [
     },
 ]
 
-//console.log(collection[0].picture);
-
-/*const newImg = document.createElement("img");
-newImg.src = collection[0].picture;
-document.body.appendChild(newImg);*/
-
-//add img to new div
-
-/*const newDiv = document.createElement("div");//create a new div
-const section = document.querySelector("section");//Select section
-section.appendChild(newDiv);//append newDiv to section
-const newImg = document.createElement("img"); // create a element for img
-newImg.src = collection[0].picture; // link img to src
-newDiv.appendChild(newImg); // append img to new Div*/
-
 for( let i = 0; i < collection.length ; i++){
 const newDiv = document.createElement("div");//create a new div
 newDiv.className ="card"; // add classname to div
@@ -158,7 +143,25 @@ newPComp.className="Competition";
 newDiv.appendChild(newPComp); // append p into newDiv
 newPComp.innerHTML = collection[i].competition;//give text to p
 
-//brb p
+const newPClub = document.createElement("p")
+newPClub.className = "Club";
+newDiv.appendChild(newPClub);
+newPClub.innerHTML = collection[i].club;
+
+const newPAge = document.createElement("p");
+newPAge.className= "age";
+newDiv.appendChild(newPAge);
+newPAge.innerHTML = collection[i].age;
+
+const newPPosition = document.createElement("p");
+newPPosition.className = "Position";
+newDiv.appendChild(newPPosition);
+newPPosition.innerHTML = collection[i].position;
+
+const newPFoot = document.createElement("p");
+newPFoot.className= "Foot";
+newDiv.appendChild(newPFoot);
+newPFoot.innerHTML = collection[i].foot;
 
 const newImg = document.createElement("img"); // create a element for img
 newImg.src = collection[i].picture; // link img to src
@@ -167,9 +170,4 @@ newDiv.appendChild(newImg); // append img to new Div
 
 
 
-//display collection on website
-/*
-const newDiv = document.createElement("div");
-newDiv.innerHTML = collection[1];
-document.body.appendChild(newDiv);*/
 
