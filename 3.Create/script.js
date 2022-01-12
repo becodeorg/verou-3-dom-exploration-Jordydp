@@ -19,6 +19,8 @@ function getTextColor(rgba) {
     }
   }
 
+
+
 function addSection(name) {
     const newSec = document.createElement("section"); // create a section
     newSec.style.backgroundColor = random_bg_color(); //give bgcolor to section
@@ -34,11 +36,7 @@ function addSection(name) {
 
 for(let i=0; i < names.length ; i++){
     const name = names[i];//declare var for items in array
-    addSection(name);//use function for each name
-    
-    
-
-
+    addSection(name);//use function for each name   
 }
 
 /*names.forEach((name) => addSection(name));
