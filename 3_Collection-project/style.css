@@ -6,18 +6,24 @@
 @media screen and (min-width: 200px) {
   body {
     background-color: green;
-  }
-  body section {
     background-image: url(https://previews.123rf.com/images/thepixel/thepixel1502/thepixel150200162/36519707-top-view-of-soccer-field-or-football-field.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+  }
+  body section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   body section .card {
     color: #fff;
