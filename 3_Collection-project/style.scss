@@ -2,7 +2,11 @@
     margin:0;
     padding:0;
     }
-
+header{
+    text-align: center;
+    color:#fff;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
 @media screen and (min-width:200px) {  
     
     body{
@@ -11,12 +15,28 @@
         background-repeat: no-repeat;
         background-position:center;
         background-size: cover;
-
+        
+        
         section{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content:space-around;
+            .row{
+                margin: 3rem;
+               
+            }
+            .row-sub{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+            }
+            .text-container{
+                visibility: hidden;
+            }
+            .card:hover .text-container{
+                visibility: visible;
+            }
             
             
 
@@ -24,6 +44,7 @@
                 color:#fff;
                 display: inline-block;
                 width: 300px;
+                height: 500px;
                 padding: 1em;
                 border-radius: 15px;  
                 margin: 10px;
@@ -31,6 +52,7 @@
                 border: 5px solid #fff;
                 background-repeat:no-repeat;
                 background-size: cover;
+                background-position: center;
                 h1{
                     margin: 1rem;
                     border-bottom: 0.5px dotted #fff;
@@ -39,17 +61,22 @@
                     max-height: 150px;
                     margin: auto;
                     display: inline-block;
+                    z-index: 1;
                 }
                 .Title{
                 text-align: center;
                 font-size: 1.5em;    
                 font-weight: 700;
                 letter-spacing: 0.02em;
+                color: #fff;
+                text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
                 }
                 p{
                     margin: 1em 0;
                     text-align: center;
                     font-weight: 300;
+                    color: #fff;
+                    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
                 }
             }
         }

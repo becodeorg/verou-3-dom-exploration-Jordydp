@@ -27,40 +27,43 @@ for( let i = 0; i < collection.length ; i++){
         let rowselctor = document.querySelector(".row-sub");
         rowselctor.appendChild(newDiv);
     }
-    
+    const textContainer = document.createElement("div");
+    textContainer.className = "text-container";
+    newDiv.appendChild(textContainer);
+
     const newTitle = document.createElement("h1");//create h1 for name
     newTitle.className= "Title"
-    newDiv.appendChild(newTitle);//append name in newdiv
+    textContainer.appendChild(newTitle);//append name in newdiv
     newTitle.innerHTML = collection[i].name;// display name in h1
     
     const newPCountry = document.createElement("p"); //create p 
     newPCountry.className="Country"
-    newDiv.appendChild(newPCountry); // append p into newDiv
+    textContainer.appendChild(newPCountry); // append p into newDiv
     newPCountry.innerHTML = "Country:"+ " " + collection[i].nationality;//give text to p
     
     const newPComp = document.createElement("p"); //create p 
     newPComp.className="Competition";
-    newDiv.appendChild(newPComp); // append p into newDiv
+    textContainer.appendChild(newPComp); // append p into newDiv
     newPComp.innerHTML = "Competition:" + " " + collection[i].competition;//give text to p
     
     const newPClub = document.createElement("p")
     newPClub.className = "Club";
-    newDiv.appendChild(newPClub);
+    textContainer.appendChild(newPClub);
     newPClub.innerHTML = "Club:" + " " + collection[i].club;
     
     const newPAge = document.createElement("p");
     newPAge.className= "age";
-    newDiv.appendChild(newPAge);
+    textContainer.appendChild(newPAge);
     newPAge.innerHTML = "Born in:"+ " " + collection[i].age;
     
     const newPPosition = document.createElement("p");
     newPPosition.className = "Position";
-    newDiv.appendChild(newPPosition);
+    textContainer.appendChild(newPPosition);
     newPPosition.innerHTML ="Position:" + " " + collection[i].position;
     
     const newPFoot = document.createElement("p");
     newPFoot.className= "Foot";
-    newDiv.appendChild(newPFoot);
+    textContainer.appendChild(newPFoot);
     newPFoot.innerHTML = "Preferred foot:" + " " + collection[i].foot;
     
     
@@ -98,4 +101,12 @@ for( let i = 0; i < collection.length ; i++){
     newDiv.style.backgroundImage = "url(" + collection[i].picture +")";
     
     }
+
+
+    /*function hoverEffects(cardSelected) {
+        cardSelected.onmouseover = function () {
+          textContainer.style.display = true;
+    }
+
+    hoverEffects(); */
     
