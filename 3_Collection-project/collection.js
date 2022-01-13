@@ -117,7 +117,7 @@ const collection = [
         competition: "EFL Championship (ENG 2)",
         club: "Birmingham City",
         age: 1999,
-        position: "Midfielder",
+        position: "Super Sub",
         foot: "Left",
         picture: "./images/Chong.png"
     },
@@ -129,6 +129,11 @@ newDiv.className ="card"; // add classname to div
 const section = document.querySelector("section");//Select section
 section.appendChild(newDiv);//append newDiv to section
 
+/*const newImg = document.createElement("img"); // create a element for img
+newImg.src = collection[i].picture; // link img to src
+newDiv.appendChild(newImg); // append img to new Div*/
+
+
 const newTitle = document.createElement("h1");//create h1 for name
 newTitle.className= "Title"
 newDiv.appendChild(newTitle);//append name in newdiv
@@ -137,36 +142,67 @@ newTitle.innerHTML = collection[i].name;// display name in h1
 const newPCountry = document.createElement("p"); //create p 
 newPCountry.className="Country"
 newDiv.appendChild(newPCountry); // append p into newDiv
-newPCountry.innerHTML = collection[i].nationality;//give text to p
+newPCountry.innerHTML = "Country:"+ " " + collection[i].nationality;//give text to p
 
 const newPComp = document.createElement("p"); //create p 
 newPComp.className="Competition";
 newDiv.appendChild(newPComp); // append p into newDiv
-newPComp.innerHTML = collection[i].competition;//give text to p
+newPComp.innerHTML = "Competition:" + " " + collection[i].competition;//give text to p
 
 const newPClub = document.createElement("p")
 newPClub.className = "Club";
 newDiv.appendChild(newPClub);
-newPClub.innerHTML = collection[i].club;
+newPClub.innerHTML = "Club:" + " " + collection[i].club;
 
 const newPAge = document.createElement("p");
 newPAge.className= "age";
 newDiv.appendChild(newPAge);
-newPAge.innerHTML = collection[i].age;
+newPAge.innerHTML = "Born in:"+ " " + collection[i].age;
 
 const newPPosition = document.createElement("p");
 newPPosition.className = "Position";
 newDiv.appendChild(newPPosition);
-newPPosition.innerHTML = collection[i].position;
+newPPosition.innerHTML ="Position:" + " " + collection[i].position;
 
 const newPFoot = document.createElement("p");
 newPFoot.className= "Foot";
 newDiv.appendChild(newPFoot);
-newPFoot.innerHTML = collection[i].foot;
+newPFoot.innerHTML = "Preferred foot:" + " " + collection[i].foot;
 
-const newImg = document.createElement("img"); // create a element for img
-newImg.src = collection[i].picture; // link img to src
-newDiv.appendChild(newImg); // append img to new Div
+
+
+let align = document.getElementsByClassName("Foot"); //get element foot
+
+// create if/else function for value of Foot If value of foot is Right
+if(collection[i].foot === "Right"){
+
+    // align item right
+    align[i].style.textAlign ="right";
+
+    //align item left
+} else{
+    align[i].style.textAlign ="left";
+}
+
+//create bg-color for every possition
+
+if(collection[i].position === "Striker"){
+    newDiv.style.border = "2px solid blue";
+}
+else if(collection[i].position === "Midfielder"){
+    newDiv.style.border = "2px solid yellow";
+}
+else if(collection[i].position === "Defender"){
+    newDiv.style.border = "2px solid brown";
+}
+else if(collection[i].position === "Goalkeeper"){
+    newDiv.style.border = "2px solid pink";
+}
+else{
+    newDiv.style.border = "2px solid gold";
+}
+newDiv.style.backgroundImage = "url(" + collection[i].picture +")";
+
 }
 
 

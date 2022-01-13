@@ -3,41 +3,53 @@
   padding: 0;
 }
 
-* body {
-  background-color: green;
-}
-
-* body section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: Center;
-      -ms-flex-pack: Center;
-          justify-content: Center;
-}
-
-* body section .card {
-  margin: 3rem;
-  background-image: url(./images/background-Card.png);
-  background-repeat: no-repeat;
-  height: 305px;
-  width: 220px;
-  background-position: center;
-  background-size: 105%;
-  background-position-x: -6px;
-  background-position-y: -5px;
-  display: block;
-  position: relative;
-}
-
-* body section .card img {
-  width: 60px;
-  height: 60px;
-  vertical-align: middle;
-  border-style: none;
+@media screen and (min-width: 200px) {
+  body {
+    background-color: green;
+  }
+  body section {
+    background-image: url(https://previews.123rf.com/images/thepixel/thepixel1502/thepixel150200162/36519707-top-view-of-soccer-field-or-football-field.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body section .card {
+    color: #fff;
+    display: inline-block;
+    width: 300px;
+    padding: 1em;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+    border: 5px solid #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body section .card h1 {
+    margin: 1rem;
+    border-bottom: 0.5px dotted #fff;
+  }
+  body section .card img {
+    max-height: 150px;
+    margin: auto;
+    display: inline-block;
+  }
+  body section .card .Title {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  body section .card p {
+    margin: 1em 0;
+    text-align: center;
+    font-weight: 300;
+  }
 }
 /*# sourceMappingURL=style.css.map */
