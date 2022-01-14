@@ -15,6 +15,9 @@ function singIn(username,password){ // create (declare a function)
 singIn(userNamePrompt,passwordPrompt); // use function
 
 
+
+
+
 for( let i = 0; i < collection.length ; i++){
     //create a new div
     const newDiv = document.createElement("div");
@@ -95,7 +98,7 @@ for( let i = 0; i < collection.length ; i++){
         align[i].style.textAlign ="left";
     }
     
-    //create bg-color for every possition
+    //create border-color for every possition
     
     if(collection[i].position === "Striker"){
         newDiv.style.border = "2px solid blue";
@@ -114,7 +117,19 @@ for( let i = 0; i < collection.length ; i++){
     }
     //give background image of player to card
     newDiv.style.backgroundImage = "url(" + collection[i].picture +")";
+
+    function hoverEffects(cardSelected) {
+        cardSelected.onmouseover = function () {
+         newDiv.style.backgroundColor = newDiv.style.borderColor;
+        };
+        cardSelected.onmouseout = function () {
+          newDiv.style.backgroundColor = "";
+        };
+      }
+
+      hoverEffects(newDiv)
     
     }
 
+    
 
