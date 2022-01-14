@@ -22,23 +22,23 @@ for( let i = 0; i < collection.length ; i++){
     newDiv.className ="card"; 
     //apend to right row in function of position
     if(collection[i].position === "Striker"){
-        let rowselctor = document.querySelector(".row-attack");
+        let rowselctor = document.querySelector(".attack");
         rowselctor.appendChild(newDiv);
     }
     else if(collection[i].position === "Midfielder"){
-        let rowselctor = document.querySelector(".row-midfield");
+        let rowselctor = document.querySelector(".midfield");
         rowselctor.appendChild(newDiv);
     }
     else if(collection[i].position === "Defender"){
-        let rowselctor = document.querySelector(".row-defence");
+        let rowselctor = document.querySelector(".defence");
         rowselctor.appendChild(newDiv);
     }
     else if(collection[i].position === "Goalkeeper"){
-        let rowselctor = document.querySelector(".row-goalie");
+        let rowselctor = document.querySelector(".goalie");
         rowselctor.appendChild(newDiv);
     }
     else{
-        let rowselctor = document.querySelector(".row-sub");
+        let rowselctor = document.querySelector(".sub");
         rowselctor.appendChild(newDiv);
     }
     const textContainer = document.createElement("div");

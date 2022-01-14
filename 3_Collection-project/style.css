@@ -13,7 +13,7 @@ body {
   visibility: hidden;
 }
 
-@media screen and (min-width: 200px) {
+@media only screen and (min-width: 200px) {
   body {
     background-color: green;
     background-image: url(https://previews.123rf.com/images/thepixel/thepixel1502/thepixel150200162/36519707-top-view-of-soccer-field-or-football-field.jpg);
@@ -38,15 +38,20 @@ body {
   }
   body section .row {
     margin: 3rem;
-  }
-  body section .row-sub {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
   }
   body section .text-container {
     visibility: hidden;
@@ -91,6 +96,31 @@ body {
     font-weight: 300;
     color: #fff;
     text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  body section .row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body section .sub {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 /*# sourceMappingURL=style.css.map */
