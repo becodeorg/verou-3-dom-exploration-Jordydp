@@ -123,6 +123,14 @@ export const collection = [
     },
 ]
 
+export var database = [  //create a var called database
+    { //user in database
+      username: "jordy",
+      password: "secret" 
+    }
+];
+
+
 
 
 

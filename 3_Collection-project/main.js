@@ -1,4 +1,18 @@
 import { collection } from "./collection.js";
+import { database } from "./collection.js";
+
+let userNamePrompt = prompt("Whats your username? Hint it's jordy"); //store usernamepromt in a var
+let passwordPrompt = prompt("What's your password? Hint it's secret");//store passwordpromt in a var
+
+function singIn(username,password){ // create (declare a function)
+  if (username === database[0].username // if username = database username
+    && password===database[0].password){ // and if password == database password
+    document.body.style.visibility = "visible"; // display body 
+  } else{ // else alertbox 
+  alert("sorry, Wrong Username and/or password");
+  }
+}
+singIn(userNamePrompt,passwordPrompt); // use function
 
 
 for( let i = 0; i < collection.length ; i++){
@@ -98,15 +112,9 @@ for( let i = 0; i < collection.length ; i++){
     else{
         newDiv.style.border = "2px solid gold";
     }
+    //give background image of player to card
     newDiv.style.backgroundImage = "url(" + collection[i].picture +")";
     
     }
 
 
-    /*function hoverEffects(cardSelected) {
-        cardSelected.onmouseover = function () {
-          textContainer.style.display = true;
-    }
-
-    hoverEffects(); */
-    
