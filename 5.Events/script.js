@@ -48,17 +48,41 @@ function random_bg_color() { //create function
     return bgColor;
 } 
 
-document.addEventListener('keyup', event => {
-    if (event.code === 'Space') {
-      random_bg_color();
-      spaceColor();
-    }
-  })
 
-document.addEventListener('keyup', event =>{
-    if(event.code === '73')({
-        
-    })
+//create function to remove li
+function removeli() {
+  //select al li
+    let li = document.querySelectorAll("li");
+    //loop through all li (on a strange loop)
+    for(let i = li.length - 1; i >= 0; --i){ 
+      //remove all li
+    li[i].remove();
+}
+}
+//create function to remove div
+function removeDiv() {
+  //select all divs by classname displayedsquare
+  let div = document.querySelectorAll(".displayedsquare");
+  //same strange loop
+  for(let i = div.length - 1; i >= 0; --i){
+    //remove al divs in loop
+    div[i].remove();
+  }
+}
+
+document.addEventListener('keyup', event => {
+  if (event.code === 'Space') {
+    random_bg_color();
+    spaceColor();
+  }
+  if(event.code === 'KeyI'){
+    removeli();
+  }
+  if(event.code === 'KeyS'){
+    removeDiv();
+  }
 })
+
+
 
 
