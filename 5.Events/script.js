@@ -29,6 +29,14 @@ for(let actionsquare of actionsquares){
   actionsquare.addEventListener('click', clickOnSquare)
   actionsquare.addEventListener('click', createsquare)
 }
+function spaceColor(){
+    const ul = document.querySelector("ul");
+    // create Element li
+    let newLi = document.createElement("li");
+    // create string with time and square
+    newLi.innerHTML = "[" + getElapsedTime() + "]" + " " + "The background color is" + " " + random_bg_color();  
+    ul.appendChild(newLi);
+}
 function random_bg_color() { //create function
     let x = Math.floor(Math.random() * 256); //generate 1ste rbg color (Var x  Math.floor =
     let y = Math.floor(Math.random() * 256);//generate 2nd rbg color
@@ -37,14 +45,20 @@ function random_bg_color() { //create function
     console.log(bgColor);// display rgb
     const body = document.querySelector("body");
     body.style.backgroundColor = bgColor;
+    return bgColor;
 } 
 
 document.addEventListener('keyup', event => {
     if (event.code === 'Space') {
       random_bg_color();
+      spaceColor();
     }
   })
 
-
+document.addEventListener('keyup', event =>{
+    if(event.code === '73')({
+        
+    })
+})
 
 
