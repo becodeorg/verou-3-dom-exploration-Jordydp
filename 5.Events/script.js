@@ -3,13 +3,13 @@ const _initTime = Date.now()
 function getElapsedTime(){
   return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
 }
-function createsquare(e){
+function createsquare(event){
   //select displayedsquare-wrapper
     const section = document.querySelector(".displayedsquare-wrapper");
     //create new div
     const newDiv = document.createElement("div");
     //add classnames e.target.classList[1] = color
-    newDiv.className = "displayedsquare" + " " + e.target.classList[1];
+    newDiv.className = "displayedsquare" + " " + event.target.classList[1];
     // append div to section
     section.appendChild(newDiv);
     // create var to select displayedsquare
@@ -22,15 +22,15 @@ function createsquare(e){
     
     
 
-function clickOnSquare(e){
-  console.log(e.target.classList[1]);
+function clickOnSquare(event){
+  console.log(event.target.classList[1]);
   console.log(getElapsedTime());
   //select ul
   const ul = document.querySelector("ul");
   // create Element li
   let newLi = document.createElement("li");
   // create string with time and square
-  newLi.innerHTML = "[" + getElapsedTime() + "]" + " " + "Created a new" + " " + e.target.classList[1] + " " + "square";  
+  newLi.innerHTML = "[" + getElapsedTime() + "]" + " " + "Created a new" + " " + event.target.classList[1] + " " + "square";  
   ul.appendChild(newLi);
   
   
@@ -102,8 +102,8 @@ document.addEventListener('keyup', event => {
 })
 
 //alert message with color of displayed square
-function msg(e){
-  color = e.target.classList[1];
+function msg(event){
+  color = event.target.classList[1];
   alert(color);
 }
 
