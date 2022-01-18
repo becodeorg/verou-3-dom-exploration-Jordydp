@@ -4,10 +4,20 @@ function getElapsedTime(){
   return Number((Date.now() - _initTime) / 1000).toFixed(2) + 's'
 }
 function createsquare(e){
+  //select displayedsquare-wrapper
     const section = document.querySelector(".displayedsquare-wrapper");
+    //create new div
     const newDiv = document.createElement("div");
+    //add classnames e.target.classList[1] = color
     newDiv.className = "displayedsquare" + " " + e.target.classList[1];
+    // append div to section
     section.appendChild(newDiv);
+    // create var to select displayedsquare
+    const displayedsquares = document.querySelectorAll('.displayedsquare')
+    //create loop to when displayedsquare is clicked use function msg
+    for(let displayedsquare of displayedsquares){
+      displayedsquare.addEventListener('click', msg);
+  }
     }
     
     
@@ -22,6 +32,8 @@ function clickOnSquare(e){
   // create string with time and square
   newLi.innerHTML = "[" + getElapsedTime() + "]" + " " + "Created a new" + " " + e.target.classList[1] + " " + "square";  
   ul.appendChild(newLi);
+  
+  
 }
 
 const actionsquares = document.querySelectorAll('.actionsquare')
@@ -43,8 +55,11 @@ function random_bg_color() { //create function
     let z = Math.floor(Math.random() * 256); //generate 3th rbg color
     let bgColor = "rgb(" + x + "," + y + "," + z + ")"; // putting x y z on the respective place in rbg
     console.log(bgColor);// display rgb
+    //select body
     const body = document.querySelector("body");
+    //apply body color
     body.style.backgroundColor = bgColor;
+    //return the rbg color
     return bgColor;
 } 
 
@@ -69,19 +84,28 @@ function removeDiv() {
     div[i].remove();
   }
 }
-
+// create event on key up
 document.addEventListener('keyup', event => {
+  //if space then use function
   if (event.code === 'Space') {
     random_bg_color();
     spaceColor();
   }
+  //if key i use function
   if(event.code === 'KeyI'){
     removeli();
   }
+  // if key s use function
   if(event.code === 'KeyS'){
     removeDiv();
   }
 })
+
+//alert message with color of displayed square
+function msg(e){
+  color = e.target.classList[1];
+  alert(color);
+}
 
 
 
